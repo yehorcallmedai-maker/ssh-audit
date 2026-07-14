@@ -437,7 +437,7 @@ class SSH_Socket(ReadBuf, WriteBuf):
             if s is not None:
                 s.shutdown(socket.SHUT_RDWR)
                 s.close()  # pragma: nocover
-        except Exception:
+        except OSError:
             pass
 
 
